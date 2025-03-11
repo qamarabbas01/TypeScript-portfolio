@@ -1,37 +1,33 @@
+import React from 'react';
+
 type Props = {};
 
 export default function Navbar({}: Props) {
   const flexBetween = "flex items-center justify-between";
   const hover = "hover:text-slate-300";
-  const fontfamily = "italic , bold";
+  const fontfamily = "italic font-bold";
 
   return (
-    <>
-      <div>
-        <div className={`${flexBetween} fixed  z-30 w-full py-6 bg-slate-400`}>
-          <h1
-            className={`${flexBetween} ${fontfamily} text-2xl text-slate-900 ml-12 `}
-          >
-            Personal <span className="text-red-500 pl-2">Logo</span>
-          </h1>
-          <div className={` ${fontfamily} ml-12 text-lg flex gap-6 `}>
-            <a className={`${hover}`} href="home">
-              Home
-            </a>
-            <a className={`${hover}`} href="about us">
-              About us
-            </a>
-            <a className={`${hover}`} href="contact us">
-              Contact us
-            </a>
-          </div>
-          <div className="mr-12 text-lg border-0 rounded-sm text-center">
-            <button className="mr-12 bg-slate-600 w-full p-2 font-sans hover:bg-slate-300">
-              Contact us
-            </button>
-          </div>
+    <nav className={`${flexBetween} fixed z-30 w-full py-4 bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg`}>
+      <div className="container mx-auto flex items-center justify-between px-6">
+        <h1 className={`${fontfamily} text-3xl text-white`}>
+          Personal <span className="text-yellow-300">Logo</span>
+        </h1>
+        <div className="flex items-center space-x-6">
+          <a className={`${hover} text-white`} href="#home">
+            Home
+          </a>
+          <a className={`${hover} text-white`} href="#about">
+            About Us
+          </a>
+          <a className={`${hover} text-white`} href="#contact">
+            Contact Us
+          </a>
         </div>
+        <button className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-400">
+          Contact Us
+        </button>
       </div>
-    </>
+    </nav>
   );
 }

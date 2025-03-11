@@ -1,35 +1,23 @@
-// import imgs from "../assest/imgs/2.jpg";
-// import imgs from "../assest/imgs/images.jpeg";
 import imgs from "../assest/imgs/images (1).jpeg";
 type Props = {};
 
 export default function Home({}: Props) {
-  const fontfamily = "italic , bold";
+  const fontfamily = "italic font-bold";
   return (
     <>
-      <div className="pt-72 bg-gray-700">
-        <div className={`${fontfamily} text-4xl ml-12 text-gray-900} `}>
-          <h1>
-            Welcome to my portfolio I'm john <br />
-            <span className="text-red-400">Frontend devloper</span>
+      <div className="pt-72 bg-gray-700 min-h-screen flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className={`${fontfamily} text-5xl mb-4`}>
+            Welcome to my portfolio, I'm John <br />
+            <span className="text-red-400">Frontend Developer</span>
           </h1>
-          <div>
-            <p className="text-lg mt-2">
-              Hi there i'm john a Frontend devloper lorem <br /> ipsum dolor sit
-              amet consectetur adipisicing elit.
-            </p>
-            <button className="border-0 rounded-lg text-lg p-3 mb-2 bg-slate-600 hover:bg-slate-500">
-              About me
-            </button>
-            <img
-              className=" ml-[48rem] mt-[-20rem]  border-0 rounded-lg w-[30%] "
-              src={imgs}
-              alt="Hero1.jpg"
-            />
-            <br />
-            <br />
-            <br />
-          </div>
+          <p className="text-lg mb-6">
+            Hi there, I'm John, a Frontend Developer. Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit.
+          </p>
+          <button className="border-0 rounded-lg text-lg px-6 py-3 mb-6 bg-slate-600 hover:bg-slate-500">
+            About Me
+          </button>
         </div>
       </div>
     </>
